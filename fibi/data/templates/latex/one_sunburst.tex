@@ -1,0 +1,22 @@
+\begin{minipage}[t]{\sizeFig\linewidth}
+    \begin{tikzpicture}
+        % Define the colors to use
+        \colorPalet
+        \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
+        \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
+        \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
+        \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
+        % diagram
+        % Outer pie: background subcategories
+        ${background_subcategories}
+        % Inner pie: background categories
+        ${background_categories}
+
+        % Outer pie: text subcategories
+        ${text_subcategories}
+        % Inner pie: text categories
+        ${text_categories}
+    \end{tikzpicture}
+    \subcaption{${title}}
+    \label{fig:${reference}}
+\end{minipage}
