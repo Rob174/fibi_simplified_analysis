@@ -2,11 +2,12 @@
 Contains all the logic to build the pie chart:
 - get the cases
 """
-import textwrap
 import pathlib as p
 from string import Template
 from typing import *
 from dataclasses import dataclass
+import fibi.src.statistical_test as statistical_test
+import numpy as np
 
 class CaseInputDict(TypedDict):
     avg: Literal["avgConclOk", "avgConclKo"]
@@ -299,3 +300,13 @@ def make_latex_piecharts_figure_for_datasets_of_problem(
         reference=make_reference_str(problem, dataset),
     )
     return result
+
+def get_case_from_diff(diff: np.ndarray, maximization: bool = True) -> subcase_letter:
+    avg_diff = np.mean(diff)
+    average_sign_follow_hansen = statistical_test.is_conclusion_sign_verified(avg_diff, maximization=maximization)
+    test_result = statistical_test.run_wilcoxon(diff)
+    pvalue_category = statistical_test.mapping_pvalue_category(test_result['pvalue'])
+    effect_size_category = statistical_test.mapping_effect_size_category(test_result["effect_size"], test="Wilcoxon")
+    
+    subcase_letter_str: subcase_letter = get_case(average_sign_follow_hansen, pvalue_category, effect_size_category)
+    return subcase_letter_str
