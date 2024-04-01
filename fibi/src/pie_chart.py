@@ -202,7 +202,7 @@ def make_one_latex_piechart(
                 text=f"{sub_category.upper()}",
             )
         )
-        if main_category_text_show or perc < 0.01:
+        if perc < 0.01:
             text_subcategories[-1] = "% "+text_subcategories[-1]
         text_subcategories.append(
             template_text_percentage.substitute(
@@ -223,6 +223,9 @@ def make_one_latex_piechart(
                 text=f"{main_category.upper()}",
             )
         )
+        if perc < 0.01 or main_category_text_show:
+            text_categories[-1] = "% "+text_categories[-1]
+            
         text_categories.append(
             template_text_percentage.substitute(
                 pie_type="Inner",
@@ -231,8 +234,7 @@ def make_one_latex_piechart(
             )
         )
         if perc < 0.01:
-            text_categories[-1] = "% "+text_categories[-1]
-            text_categories[-2] = "% "+text_categories[-2]
+            text_categories[-1] = "% "+text_categories[-2]
     
         
     with open(template_folder / "one_sunburst.tex") as f:
