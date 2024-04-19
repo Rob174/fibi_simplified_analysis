@@ -303,9 +303,9 @@ def make_latex_piecharts_figure_for_datasets_of_problem(
     )
     return result
 
-def get_case_from_diff(diff: np.ndarray, maximization: bool = True) -> subcase_letter:
+def get_case_from_diff(diff: np.ndarray, maximization: bool = True, init_random: bool = True) -> subcase_letter:
     avg_diff = np.mean(diff)
-    average_sign_follow_hansen = statistical_test.is_conclusion_sign_verified(avg_diff, maximization=maximization)
+    average_sign_follow_hansen = statistical_test.is_conclusion_sign_verified(avg_diff, maximization=maximization, init_random=init_random)
     test_result = statistical_test.run_wilcoxon(diff)
     pvalue_category = statistical_test.mapping_pvalue_category(test_result['pvalue'])
     effect_size_category = statistical_test.mapping_effect_size_category(test_result["effect_size"], test="Wilcoxon")
