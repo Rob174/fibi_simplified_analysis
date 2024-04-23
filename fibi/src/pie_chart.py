@@ -173,7 +173,7 @@ def make_one_latex_piechart(
                 start_angle=start_angle,
                 end_angle=end_angle,
                 pie_type="Outer",
-                category=main_category
+                category=main_category.upper()
             )
         )
     # Inner filled arc
@@ -184,7 +184,7 @@ def make_one_latex_piechart(
                 start_angle=start_angle,
                 end_angle=end_angle,
                 pie_type="Inner",
-                category=inner_category
+                category=inner_category.upper()
             )
         )
     
