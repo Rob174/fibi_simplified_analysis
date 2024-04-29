@@ -85,7 +85,8 @@ def run_wilcoxon(diff: np.ndarray) -> Dict[str, Any]:
     if n_zero == len(d):
         prob = np.nan
         return dict(
-            es=np.nan,
+            pvalue=np.nan,
+            effect_size=np.nan,
             count=count,
             n_zero=len(d),
             r_plus=0,
