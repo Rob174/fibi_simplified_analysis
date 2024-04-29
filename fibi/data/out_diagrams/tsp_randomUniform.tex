@@ -1,0 +1,294 @@
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=\linewidth}
+    \begin{minipage}[t]{\sizeFig\linewidth}
+        \begin{tikzpicture}
+            % Define the colors to use
+            \colorPalet
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
+            % diagram
+            % Outer pie: background subcategories
+            \filledarc{0}{290.7692307692308}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{290.7692307692308}{332.3076923076923}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{332.3076923076923}{346.1538461538462}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{346.1538461538462}{346.1538461538462}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{346.1538461538462}{346.1538461538462}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{346.1538461538462}{360.00000000000006}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{360.00000000000006}{360.00000000000006}{\sizeOuterPie}{\catOuterCColor}
+            % Inner pie: background categories
+            \filledarc{0}{332.3076923076923}{\sizeInnerPie}{\catInnerAColor}
+            \filledarc{332.3076923076923}{346.1538461538462}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{346.1538461538462}{360.00000000000006}{\sizeInnerPie}{\catInnerCColor}
+    
+            % Outer pie: text subcategories
+            \node [font=\fontOuter] at (145.3846153846154:\posRadLabOuter) {A1};
+            \node [below, font=\fontOuter] at (145.3846153846154:\posRadLabOuter) {80.77\%};
+            \node [font=\fontOuter] at (311.53846153846155:\posRadLabOuter) {A2};
+            \node [below, font=\fontOuter] at (311.53846153846155:\posRadLabOuter) {11.54\%};
+            \node [font=\fontOuter] at (339.2307692307693:\posRadLabOuter) {B1};
+            \node [below, font=\fontOuter] at (339.2307692307693:\posRadLabOuter) {3.85\%};
+            % \node [font=\fontOuter] at (346.1538461538462:\posRadLabOuter) {B2};
+            % \node [below, font=\fontOuter] at (346.1538461538462:\posRadLabOuter) {0.00\%};
+            % \node [font=\fontOuter] at (346.1538461538462:\posRadLabOuter) {B3};
+            % \node [below, font=\fontOuter] at (346.1538461538462:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (353.0769230769231:\posRadLabOuter) {C1};
+            \node [below, font=\fontOuter] at (353.0769230769231:\posRadLabOuter) {3.85\%};
+            % \node [font=\fontOuter] at (360.00000000000006:\posRadLabOuter) {C2};
+            % \node [below, font=\fontOuter] at (360.00000000000006:\posRadLabOuter) {0.00\%};
+            % Inner pie: text categories
+            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {A};
+            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {92.31\%};
+            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {B};
+            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {3.85\%};
+            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {C};
+            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {3.85\%};
+        \end{tikzpicture}
+        \subcaption{\emph{tsp/randomUniform/RAND}}
+        \label{fig:tsprandomUniformRAND}
+    \end{minipage}
+    \begin{minipage}[t]{\sizeFig\linewidth}
+        \begin{tikzpicture}
+            % Define the colors to use
+            \colorPalet
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
+            % diagram
+            % Outer pie: background subcategories
+            \filledarc{0}{360.0}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            % Inner pie: background categories
+            \filledarc{0}{360.0}{\sizeInnerPie}{\catInnerAColor}
+            \filledarc{360.0}{360.0}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{360.0}{360.0}{\sizeInnerPie}{\catInnerCColor}
+    
+            % Outer pie: text subcategories
+            \node [font=\fontOuter] at (180.0:\posRadLabOuter) {A1};
+            \node [below, font=\fontOuter] at (180.0:\posRadLabOuter) {100.00\%};
+            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {A2};
+            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
+            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {B1};
+            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
+            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {B2};
+            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
+            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {B3};
+            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
+            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {C1};
+            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
+            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {C2};
+            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
+            % Inner pie: text categories
+            \node [font=\fontInner] at (360.0:\posRadLabInner) {A};
+            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {100.00\%};
+            % \node [font=\fontInner] at (360.0:\posRadLabInner) {B};
+            % % \node [font=\fontInner] at (360.0:\posRadLabInner) {B};
+            % \node [font=\fontInner] at (360.0:\posRadLabInner) {C};
+            % % \node [font=\fontInner] at (360.0:\posRadLabInner) {C};
+        \end{tikzpicture}
+        \subcaption{\emph{tsp/randomUniform/GREEDY}}
+        \label{fig:tsprandomUniformGREEDY}
+    \end{minipage}
+    \begin{minipage}[t]{\sizeFig\linewidth}
+        \begin{tikzpicture}
+            % Define the colors to use
+            \colorPalet
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
+            % diagram
+            % Outer pie: background subcategories
+            \filledarc{0}{13.846153846153847}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{13.846153846153847}{13.846153846153847}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{13.846153846153847}{290.76923076923083}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{290.76923076923083}{318.4615384615385}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{318.4615384615385}{318.4615384615385}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{318.4615384615385}{360.00000000000006}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{360.00000000000006}{360.00000000000006}{\sizeOuterPie}{\catOuterCColor}
+            % Inner pie: background categories
+            \filledarc{0}{13.846153846153847}{\sizeInnerPie}{\catInnerAColor}
+            \filledarc{13.846153846153847}{318.46153846153845}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{318.46153846153845}{360.0}{\sizeInnerPie}{\catInnerCColor}
+    
+            % Outer pie: text subcategories
+            \node [font=\fontOuter] at (6.923076923076923:\posRadLabOuter) {A1};
+            \node [below, font=\fontOuter] at (6.923076923076923:\posRadLabOuter) {3.85\%};
+            % \node [font=\fontOuter] at (13.846153846153847:\posRadLabOuter) {A2};
+            % \node [below, font=\fontOuter] at (13.846153846153847:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (152.30769230769235:\posRadLabOuter) {B1};
+            \node [below, font=\fontOuter] at (152.30769230769235:\posRadLabOuter) {76.92\%};
+            \node [font=\fontOuter] at (304.61538461538464:\posRadLabOuter) {B2};
+            \node [below, font=\fontOuter] at (304.61538461538464:\posRadLabOuter) {7.69\%};
+            % \node [font=\fontOuter] at (318.4615384615385:\posRadLabOuter) {B3};
+            % \node [below, font=\fontOuter] at (318.4615384615385:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (339.2307692307693:\posRadLabOuter) {C1};
+            \node [below, font=\fontOuter] at (339.2307692307693:\posRadLabOuter) {11.54\%};
+            % \node [font=\fontOuter] at (360.00000000000006:\posRadLabOuter) {C2};
+            % \node [below, font=\fontOuter] at (360.00000000000006:\posRadLabOuter) {0.00\%};
+            % Inner pie: text categories
+            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {A};
+            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {3.85\%};
+            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {B};
+            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {84.62\%};
+            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {C};
+            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {11.54\%};
+        \end{tikzpicture}
+        \subcaption{\emph{tsp/randomUniform/GREEDY TOP3}}
+        \label{fig:tsprandomUniformGREEDY TOP3}
+    \end{minipage}
+    \begin{minipage}[t]{\sizeFig\linewidth}
+        \begin{tikzpicture}
+            % Define the colors to use
+            \colorPalet
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
+            % diagram
+            % Outer pie: background subcategories
+            \filledarc{0}{13.846153846153847}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{13.846153846153847}{13.846153846153847}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{13.846153846153847}{332.3076923076923}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{332.3076923076923}{346.1538461538462}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{346.1538461538462}{346.1538461538462}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{346.1538461538462}{360.00000000000006}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{360.00000000000006}{360.00000000000006}{\sizeOuterPie}{\catOuterCColor}
+            % Inner pie: background categories
+            \filledarc{0}{13.846153846153847}{\sizeInnerPie}{\catInnerAColor}
+            \filledarc{13.846153846153847}{346.1538461538462}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{346.1538461538462}{360.00000000000006}{\sizeInnerPie}{\catInnerCColor}
+    
+            % Outer pie: text subcategories
+            \node [font=\fontOuter] at (6.923076923076923:\posRadLabOuter) {A1};
+            \node [below, font=\fontOuter] at (6.923076923076923:\posRadLabOuter) {3.85\%};
+            % \node [font=\fontOuter] at (13.846153846153847:\posRadLabOuter) {A2};
+            % \node [below, font=\fontOuter] at (13.846153846153847:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (173.0769230769231:\posRadLabOuter) {B1};
+            \node [below, font=\fontOuter] at (173.0769230769231:\posRadLabOuter) {88.46\%};
+            \node [font=\fontOuter] at (339.2307692307693:\posRadLabOuter) {B2};
+            \node [below, font=\fontOuter] at (339.2307692307693:\posRadLabOuter) {3.85\%};
+            % \node [font=\fontOuter] at (346.1538461538462:\posRadLabOuter) {B3};
+            % \node [below, font=\fontOuter] at (346.1538461538462:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (353.0769230769231:\posRadLabOuter) {C1};
+            \node [below, font=\fontOuter] at (353.0769230769231:\posRadLabOuter) {3.85\%};
+            % \node [font=\fontOuter] at (360.00000000000006:\posRadLabOuter) {C2};
+            % \node [below, font=\fontOuter] at (360.00000000000006:\posRadLabOuter) {0.00\%};
+            % Inner pie: text categories
+            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {A};
+            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {3.85\%};
+            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {B};
+            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {92.31\%};
+            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {C};
+            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {3.85\%};
+        \end{tikzpicture}
+        \subcaption{\emph{tsp/randomUniform/GREEDY TOP4}}
+        \label{fig:tsprandomUniformGREEDY TOP4}
+    \end{minipage}
+    \begin{minipage}[t]{\sizeFig\linewidth}
+        \begin{tikzpicture}
+            % Define the colors to use
+            \colorPalet
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
+            % diagram
+            % Outer pie: background subcategories
+            \filledarc{0}{13.846153846153847}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{13.846153846153847}{13.846153846153847}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{13.846153846153847}{304.61538461538464}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{304.61538461538464}{332.3076923076923}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{332.3076923076923}{332.3076923076923}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{332.3076923076923}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            % Inner pie: background categories
+            \filledarc{0}{13.846153846153847}{\sizeInnerPie}{\catInnerAColor}
+            \filledarc{13.846153846153847}{332.3076923076923}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{332.3076923076923}{360.0}{\sizeInnerPie}{\catInnerCColor}
+    
+            % Outer pie: text subcategories
+            \node [font=\fontOuter] at (6.923076923076923:\posRadLabOuter) {A1};
+            \node [below, font=\fontOuter] at (6.923076923076923:\posRadLabOuter) {3.85\%};
+            % \node [font=\fontOuter] at (13.846153846153847:\posRadLabOuter) {A2};
+            % \node [below, font=\fontOuter] at (13.846153846153847:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (159.23076923076925:\posRadLabOuter) {B1};
+            \node [below, font=\fontOuter] at (159.23076923076925:\posRadLabOuter) {80.77\%};
+            \node [font=\fontOuter] at (318.46153846153845:\posRadLabOuter) {B2};
+            \node [below, font=\fontOuter] at (318.46153846153845:\posRadLabOuter) {7.69\%};
+            % \node [font=\fontOuter] at (332.3076923076923:\posRadLabOuter) {B3};
+            % \node [below, font=\fontOuter] at (332.3076923076923:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (346.1538461538462:\posRadLabOuter) {C1};
+            \node [below, font=\fontOuter] at (346.1538461538462:\posRadLabOuter) {7.69\%};
+            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {C2};
+            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
+            % Inner pie: text categories
+            \node [font=\fontInner] at (360.0:\posRadLabInner) {A};
+            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {3.85\%};
+            \node [font=\fontInner] at (360.0:\posRadLabInner) {B};
+            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {88.46\%};
+            \node [font=\fontInner] at (360.0:\posRadLabInner) {C};
+            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {7.69\%};
+        \end{tikzpicture}
+        \subcaption{\emph{tsp/randomUniform/GREEDY TOP5}}
+        \label{fig:tsprandomUniformGREEDY TOP5}
+    \end{minipage}
+    \begin{minipage}[t]{\sizeFig\linewidth}
+        \begin{tikzpicture}
+            % Define the colors to use
+            \colorPalet
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
+            % diagram
+            % Outer pie: background subcategories
+            \filledarc{0}{27.692307692307693}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{27.692307692307693}{27.692307692307693}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{27.692307692307693}{263.0769230769231}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{263.0769230769231}{290.7692307692308}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{290.7692307692308}{290.7692307692308}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{290.7692307692308}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            % Inner pie: background categories
+            \filledarc{0}{27.692307692307693}{\sizeInnerPie}{\catInnerAColor}
+            \filledarc{27.692307692307693}{290.7692307692307}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{290.7692307692307}{359.99999999999994}{\sizeInnerPie}{\catInnerCColor}
+    
+            % Outer pie: text subcategories
+            \node [font=\fontOuter] at (13.846153846153847:\posRadLabOuter) {A1};
+            \node [below, font=\fontOuter] at (13.846153846153847:\posRadLabOuter) {7.69\%};
+            % \node [font=\fontOuter] at (27.692307692307693:\posRadLabOuter) {A2};
+            % \node [below, font=\fontOuter] at (27.692307692307693:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (145.3846153846154:\posRadLabOuter) {B1};
+            \node [below, font=\fontOuter] at (145.3846153846154:\posRadLabOuter) {65.38\%};
+            \node [font=\fontOuter] at (276.9230769230769:\posRadLabOuter) {B2};
+            \node [below, font=\fontOuter] at (276.9230769230769:\posRadLabOuter) {7.69\%};
+            % \node [font=\fontOuter] at (290.7692307692308:\posRadLabOuter) {B3};
+            % \node [below, font=\fontOuter] at (290.7692307692308:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (325.38461538461536:\posRadLabOuter) {C1};
+            \node [below, font=\fontOuter] at (325.38461538461536:\posRadLabOuter) {19.23\%};
+            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {C2};
+            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
+            % Inner pie: text categories
+            \node [font=\fontInner] at (360.0:\posRadLabInner) {A};
+            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {7.69\%};
+            \node [font=\fontInner] at (360.0:\posRadLabInner) {B};
+            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {73.08\%};
+            \node [font=\fontInner] at (360.0:\posRadLabInner) {C};
+            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {19.23\%};
+        \end{tikzpicture}
+        \subcaption{\emph{tsp/randomUniform/GREEDY randomized}}
+        \label{fig:tsprandomUniformGREEDY randomized}
+    \end{minipage}
+    \caption{Pie-charts for the tsp problem with the randomUniform}
+    \label{fig:tsprandomUniform}
+\end{figure}
