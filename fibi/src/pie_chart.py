@@ -14,74 +14,70 @@ class CaseInputDict(TypedDict):
     pvalue_category: Literal["small", "medium", "big"]
     es: Literal["small", "big", "nan"]
 
-subcase_letter = Literal["a1","a2","b1","b2","c1","c2"]
-case_letter = Literal["a","b","c"]
+subcase_letter = Literal["FI","fi","BI","bi","NC"]
+case_letter = Literal["f","b","n"]
 
 def get_case(
-    average_sign_follow_hansen: bool, 
+    fi_better: bool, 
     pvalue_category: Literal["small", "medium", "big"], 
     effect_size_category: Literal["small", "big", "nan"]
 ) -> subcase_letter:
     case_letter = ""
-    if average_sign_follow_hansen and (pvalue_category == 'small') and effect_size_category != 'small':
-        case_letter = "a1"
-    elif average_sign_follow_hansen and (pvalue_category == 'small') and effect_size_category == 'small':
-        case_letter = "a2"
-    elif not average_sign_follow_hansen and (pvalue_category == 'small') and effect_size_category != 'small':
-        case_letter = "b1"
-    elif not average_sign_follow_hansen and pvalue_category == 'small' and effect_size_category == 'small':
-        case_letter = "b2"
-    elif pvalue_category == 'big':
-        case_letter = "c1"
-    elif pvalue_category == 'nan':
-        case_letter = "c2"
+    if fi_better and (pvalue_category == 'small') and effect_size_category != 'small':
+        case_letter = "FI"
+    elif fi_better and (pvalue_category == 'small') and effect_size_category == 'small':
+        case_letter = "fi"
+    elif not fi_better and (pvalue_category == 'small') and effect_size_category != 'small':
+        case_letter = "BI"
+    elif not fi_better and pvalue_category == 'small' and effect_size_category == 'small':
+        case_letter = "bi"
+    elif pvalue_category == 'big' or pvalue_category == "nan":
+        case_letter = "NC"
     else:
-        raise Exception(f"Case not found with {average_sign_follow_hansen=} {pvalue_category=} {effect_size_category=}")
+        raise Exception(f"Case not found with {fi_better=} {pvalue_category=} {effect_size_category=}")
     return case_letter
 
 @dataclass
-class SubCaseACounts:
+class SubCaseFICounts:
     """To store the counts of A subcases"""
-    a1: int = 0
-    a2: int = 0
+    FI: int = 0
+    fi: int = 0
     def __getitem__(self, item):
         return getattr(self, item)
     def __setitem__(self, key, value):
         return setattr(self, key, value)
     @property
     def total(self):
-        return self.a1 + self.a2
+        return self.FI + self.fi
     
 @dataclass
-class SubCaseBCounts:
+class SubCaseBICounts:
     """To store the counts of B subcases"""
-    b1: int = 0
-    b2: int = 0
-    b3: int = 0
+    BI: int = 0
+    bi: int = 0
     def __getitem__(self, item):
         return getattr(self, item)
     def __setitem__(self, key, value):
         return setattr(self, key, value)
     @property
     def total(self):
-        return self.b1 + self.b2 + self.b3
+        return self.bi + self.BI
     
 @dataclass
-class SubCaseCCounts:
+class SubCaseNCCounts:
     """To store the counts of C subcases"""
-    c1: int = 0
-    c2: int = 0
+    NC: int = 0
     def __getitem__(self, item):
         return getattr(self, item)
     def __setitem__(self, key, value):
         return setattr(self, key, value)
     @property
     def total(self):
-        return self.c1 + self.c2
+        return self.NC
     
-def count_cases(list_cases: List[subcase_letter]) -> Tuple[SubCaseACounts, SubCaseBCounts, SubCaseCCounts]:
+def count_cases(list_cases: List[subcase_letter]) -> Tuple[SubCaseFICounts, SubCaseBICounts, SubCaseNCCounts]:
     """Given a list of cases for each instances, count the number of cases in each category"""
-    subcases_counters = (SubCaseACounts(), SubCaseBCounts(), SubCaseCCounts())
+    subcases_counters = (SubCaseFICounts(), SubCaseBICounts(), SubCaseNCCounts())
     for case in list_cases:
         found = False
         for subcase_counter in subcases_counters:
@@ -96,9 +92,9 @@ def count_cases(list_cases: List[subcase_letter]) -> Tuple[SubCaseACounts, SubCa
 
 class CountDict(TypedDict):
     """Contains for each category the number of samples in this category and the subcategory"""
-    a: Tuple[int, Dict[str,int]]
-    b: Tuple[int, Dict[str,int]]
-    c: Tuple[int, Dict[str,int]]
+    FI: Tuple[int, Dict[str,int]]
+    BI: Tuple[int, Dict[str,int]]
+    NC: Tuple[int, Dict[str,int]]
 
 def make_reference_str(problem: str, dataset: str, init: str = ""):
     """Builds the reference for the latex (sub)figure"""
@@ -118,7 +114,7 @@ def make_one_latex_piechart(
     problem: str, 
     dataset: str, 
     init: str, 
-    subcases_counts: Tuple[SubCaseACounts, SubCaseBCounts, SubCaseCCounts], 
+    subcases_counts: Tuple[SubCaseFICounts, SubCaseBICounts, SubCaseNCCounts], 
     template_folder: p.Path,
     main_category_text_show: bool = False,
 ):
@@ -149,11 +145,13 @@ def make_one_latex_piechart(
             end_angle = start_angle + frac*360
             middle = (start_angle+end_angle)/2
             angle = end_angle
-            yield main_category, nbVals, frac,perc, start_angle, end_angle, middle,dico_inner
+            biggest_subcat_num = max(dico_inner.values())
+            one_cat_only = (nbVals - biggest_subcat_num)/tot < 0.01
+            yield main_category, nbVals, frac,perc, start_angle, end_angle, middle,dico_inner, one_cat_only
     
     def generator_outer(data: CountDict):
         angle = 0
-        for main_category, _, frac,perc, start_angle, end_angle, middle,dico_inner in generator_inner(data):
+        for main_category, _, frac,perc, start_angle, end_angle, middle,dico_inner, one_cat_only in generator_inner(data):
             for sub_category, nbValsSubCat in dico_inner.items():
                 frac = nbValsSubCat/tot
                 perc = frac*100
@@ -178,7 +176,7 @@ def make_one_latex_piechart(
         )
     # Inner filled arc
     background_categories = []
-    for inner_category, _, _, perc, start_angle, end_angle, middle,dico_inner in generator_inner(counts):
+    for inner_category, _, _, perc, start_angle, end_angle, middle,dico_inner, one_cat_only in generator_inner(counts):
         background_categories.append(
             template_filled_arc.substitute(
                 start_angle=start_angle,
@@ -199,7 +197,7 @@ def make_one_latex_piechart(
             template_text_category.substitute(
                 pie_type="Outer",
                 angle=middle_angle,
-                text=f"{sub_category.upper()}",
+                text=f"\\emphasis{{{sub_category}}}",
             )
         )
         if perc < 0.01:
@@ -215,26 +213,17 @@ def make_one_latex_piechart(
             text_subcategories[-1] = "% "+text_subcategories[-1]
         
     text_categories = []
-    for main_category, _, _, perc, start_angle, end_angle, middle, dico in generator_inner(counts):
+    for main_category, _, _, perc, start_angle, end_angle, middle, dico, one_cat_only in generator_inner(counts):
         text_categories.append(
             template_text_category.substitute(
                 pie_type="Inner",
-                angle=middle_angle,
-                text=f"{main_category.upper()}",
+                angle=middle,
+                text=f"{perc:.2f}\\%",
             )
         )
-        if perc < 0.01 or main_category_text_show:
+        if perc < 0.01 or main_category_text_show or one_cat_only:
             text_categories[-1] = "% "+text_categories[-1]
             
-        text_categories.append(
-            template_text_percentage.substitute(
-                pie_type="Inner",
-                angle=middle_angle,
-                text_percentage=f"{perc:.2f}\\%",
-            )
-        )
-        if perc < 0.01:
-            text_categories[-1] = "% "+text_categories[-2]
     
         
     with open(template_folder / "one_sunburst.tex") as f:
@@ -286,11 +275,13 @@ def make_latex_piecharts_figure_for_datasets_of_problem(
             subcases_counts=subcases_counts,
             template_folder=template_folder
         )
-    def sort_fn(s: str) -> Tuple:
-        pos = 0,0,0
-        if 'RAND' in s:
-            return pos
-        return 1, len(s), s
+    def sort_fn(s: str) -> int:
+        if s == 'RAND' or s == "random":
+            return 0
+        elif s == "greedy" or s == "GREEDY":
+            return 1
+        else:
+            return 2
     diagrams = [diagrams[k] for k in sorted(diagrams,key=sort_fn)]
     with open(template_folder / "title_figure.tex") as f:
         template_title = Template(f.read())
@@ -305,10 +296,10 @@ def make_latex_piecharts_figure_for_datasets_of_problem(
 
 def get_case_from_diff(diff: np.ndarray, maximization: bool = True, init_random: bool = True) -> subcase_letter:
     avg_diff = np.mean(diff)
-    average_sign_follow_hansen = statistical_test.is_conclusion_sign_verified(avg_diff, maximization=maximization, init_random=init_random)
     test_result = statistical_test.run_wilcoxon(diff)
     pvalue_category = statistical_test.mapping_pvalue_category(test_result['pvalue'])
     effect_size_category = statistical_test.mapping_effect_size_category(test_result["effect_size"], test="Wilcoxon")
+    fi_better = statistical_test.fi_is_better(avg_diff, maximization=maximization)
     
-    subcase_letter_str: subcase_letter = get_case(average_sign_follow_hansen, pvalue_category, effect_size_category)
+    subcase_letter_str: subcase_letter = get_case(fi_better, pvalue_category, effect_size_category)
     return subcase_letter_str

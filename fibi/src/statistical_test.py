@@ -73,6 +73,21 @@ def is_conclusion_sign_verified(avg: float, maximization: bool = True, init_rand
         }
     return mapping[int(np.sign(avg))]
 
+def fi_is_better(avg: float, maximization: bool = True):
+    if maximization:
+        mapping = {
+            -1: True,# (BI-FI)/init < 0 => BI < FI => FI better
+            1: False,# (BI-FI)/init > 0 => BI > FI => BI better
+            0: False
+        }
+    else:
+        mapping = {
+            -1: False,# (BI-FI)/init < 0 => BI < FI => BI better
+            1: True, # (BI-FI)/init > 0 => BI > FI => FI better
+            0: False 
+        }
+    return mapping[int(np.sign(avg))]
+    
 def run_wilcoxon(diff: np.ndarray) -> Dict[str, Any]:
     """Run the wilcoxon test and returns a dictionnary with especially the pvalue and effect_size"""
     d = diff.astype(np.float64)  # type: ignore
