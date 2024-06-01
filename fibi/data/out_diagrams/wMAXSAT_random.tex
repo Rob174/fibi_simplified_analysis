@@ -11,43 +11,34 @@
             \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
             % diagram
             % Outer pie: background subcategories
-            \filledarc{0}{270.0}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{270.0}{270.0}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{270.0}{360.0}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterCColor}
-            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{0}{315.0}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{315.0}{315.0}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{315.0}{322.5}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{322.5}{322.5}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{322.5}{360.0}{\sizeOuterPie}{\catOuterNColor}
             % Inner pie: background categories
-            \filledarc{0}{270.0}{\sizeInnerPie}{\catInnerAColor}
-            \filledarc{270.0}{360.0}{\sizeInnerPie}{\catInnerBColor}
-            \filledarc{360.0}{360.0}{\sizeInnerPie}{\catInnerCColor}
+            \filledarc{0}{315.0}{\sizeInnerPie}{\catInnerFColor}
+            \filledarc{315.0}{322.5}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{322.5}{360.0}{\sizeInnerPie}{\catInnerNColor}
     
             % Outer pie: text subcategories
-            \node [font=\fontOuter] at (135.0:\posRadLabOuter) {A1};
-            \node [below, font=\fontOuter] at (135.0:\posRadLabOuter) {75.00\%};
-            % \node [font=\fontOuter] at (270.0:\posRadLabOuter) {A2};
-            % \node [below, font=\fontOuter] at (270.0:\posRadLabOuter) {0.00\%};
-            \node [font=\fontOuter] at (315.0:\posRadLabOuter) {B1};
-            \node [below, font=\fontOuter] at (315.0:\posRadLabOuter) {25.00\%};
-            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {B2};
-            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
-            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {B3};
-            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
-            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {C1};
-            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
-            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {C2};
-            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (157.5:\posRadLabOuter) {\textit{FI}};
+            \node [below, font=\fontOuter] at (157.5:\posRadLabOuter) {87.50\%};
+            % \node [font=\fontOuter] at (315.0:\posRadLabOuter) {\textit{fi}};
+            % \node [below, font=\fontOuter] at (315.0:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (318.75:\posRadLabOuter) {\textit{BI}};
+            \node [below, font=\fontOuter] at (318.75:\posRadLabOuter) {2.08\%};
+            % \node [font=\fontOuter] at (322.5:\posRadLabOuter) {\textit{bi}};
+            % \node [below, font=\fontOuter] at (322.5:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (341.25:\posRadLabOuter) {\textit{NC}};
+            \node [below, font=\fontOuter] at (341.25:\posRadLabOuter) {10.42\%};
             % Inner pie: text categories
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {A};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {75.00\%};
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {B};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {25.00\%};
-            % \node [font=\fontInner] at (360.0:\posRadLabInner) {C};
-            % % \node [font=\fontInner] at (360.0:\posRadLabInner) {C};
+            % \node [font=\fontInner] at (157.5:\posRadLabInner) {87.50\%};
+            % \node [font=\fontInner] at (318.75:\posRadLabInner) {2.08\%};
+            % \node [font=\fontInner] at (341.25:\posRadLabInner) {10.42\%};
         \end{tikzpicture}
-        \subcaption{\emph{wMAXSAT/random/greedy}}
-        \label{fig:wMAXSATrandomgreedy}
+        \subcaption{\emph{wMAXSAT/random/random}}
+        \label{fig:wMAXSATrandomrandom}
     \end{minipage}
     \begin{minipage}[t]{\sizeFig\linewidth}
         \begin{tikzpicture}
@@ -59,43 +50,34 @@
             \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
             % diagram
             % Outer pie: background subcategories
-            \filledarc{0}{315.0}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{315.0}{315.0}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{315.0}{322.5}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{322.5}{322.5}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{322.5}{322.5}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{322.5}{360.0}{\sizeOuterPie}{\catOuterCColor}
-            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{0}{90.0}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{90.0}{90.0}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{90.0}{360.0}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterNColor}
             % Inner pie: background categories
-            \filledarc{0}{315.0}{\sizeInnerPie}{\catInnerAColor}
-            \filledarc{315.0}{322.5}{\sizeInnerPie}{\catInnerBColor}
-            \filledarc{322.5}{360.0}{\sizeInnerPie}{\catInnerCColor}
+            \filledarc{0}{90.0}{\sizeInnerPie}{\catInnerFColor}
+            \filledarc{90.0}{360.0}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{360.0}{360.0}{\sizeInnerPie}{\catInnerNColor}
     
             % Outer pie: text subcategories
-            \node [font=\fontOuter] at (157.5:\posRadLabOuter) {A1};
-            \node [below, font=\fontOuter] at (157.5:\posRadLabOuter) {87.50\%};
-            % \node [font=\fontOuter] at (315.0:\posRadLabOuter) {A2};
-            % \node [below, font=\fontOuter] at (315.0:\posRadLabOuter) {0.00\%};
-            \node [font=\fontOuter] at (318.75:\posRadLabOuter) {B1};
-            \node [below, font=\fontOuter] at (318.75:\posRadLabOuter) {2.08\%};
-            % \node [font=\fontOuter] at (322.5:\posRadLabOuter) {B2};
-            % \node [below, font=\fontOuter] at (322.5:\posRadLabOuter) {0.00\%};
-            % \node [font=\fontOuter] at (322.5:\posRadLabOuter) {B3};
-            % \node [below, font=\fontOuter] at (322.5:\posRadLabOuter) {0.00\%};
-            \node [font=\fontOuter] at (341.25:\posRadLabOuter) {C1};
-            \node [below, font=\fontOuter] at (341.25:\posRadLabOuter) {10.42\%};
-            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {C2};
+            \node [font=\fontOuter] at (45.0:\posRadLabOuter) {\textit{FI}};
+            \node [below, font=\fontOuter] at (45.0:\posRadLabOuter) {25.00\%};
+            % \node [font=\fontOuter] at (90.0:\posRadLabOuter) {\textit{fi}};
+            % \node [below, font=\fontOuter] at (90.0:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (225.0:\posRadLabOuter) {\textit{BI}};
+            \node [below, font=\fontOuter] at (225.0:\posRadLabOuter) {75.00\%};
+            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {\textit{bi}};
+            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
+            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {\textit{NC}};
             % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
             % Inner pie: text categories
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {A};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {87.50\%};
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {B};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {2.08\%};
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {C};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {10.42\%};
+            % \node [font=\fontInner] at (45.0:\posRadLabInner) {25.00\%};
+            % \node [font=\fontInner] at (225.0:\posRadLabInner) {75.00\%};
+            % \node [font=\fontInner] at (360.0:\posRadLabInner) {0.00\%};
         \end{tikzpicture}
-        \subcaption{\emph{wMAXSAT/random/random}}
-        \label{fig:wMAXSATrandomrandom}
+        \subcaption{\emph{wMAXSAT/random/greedy}}
+        \label{fig:wMAXSATrandomgreedy}
     \end{minipage}
     \caption{Pie-charts for the wMAXSAT problem with the random}
     \label{fig:wMAXSATrandom}

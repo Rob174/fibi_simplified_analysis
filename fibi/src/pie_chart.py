@@ -197,7 +197,7 @@ def make_one_latex_piechart(
             template_text_category.substitute(
                 pie_type="Outer",
                 angle=middle_angle,
-                text=f"\\emphasis{{{sub_category}}}",
+                text=f"\\textit{{{sub_category}}}",
             )
         )
         if perc < 0.01:

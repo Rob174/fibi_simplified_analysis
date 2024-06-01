@@ -11,40 +11,31 @@
             \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
             % diagram
             % Outer pie: background subcategories
-            \filledarc{0}{295.86206896551727}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{295.86206896551727}{310.3448275862069}{\sizeOuterPie}{\catOuterAColor}
+            \filledarc{0}{295.86206896551727}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{295.86206896551727}{310.3448275862069}{\sizeOuterPie}{\catOuterFColor}
             \filledarc{310.3448275862069}{347.58620689655174}{\sizeOuterPie}{\catOuterBColor}
             \filledarc{347.58620689655174}{347.58620689655174}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{347.58620689655174}{347.58620689655174}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{347.58620689655174}{360.0}{\sizeOuterPie}{\catOuterCColor}
-            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{347.58620689655174}{360.0}{\sizeOuterPie}{\catOuterNColor}
             % Inner pie: background categories
-            \filledarc{0}{310.34482758620686}{\sizeInnerPie}{\catInnerAColor}
+            \filledarc{0}{310.34482758620686}{\sizeInnerPie}{\catInnerFColor}
             \filledarc{310.34482758620686}{347.5862068965517}{\sizeInnerPie}{\catInnerBColor}
-            \filledarc{347.5862068965517}{359.99999999999994}{\sizeInnerPie}{\catInnerCColor}
+            \filledarc{347.5862068965517}{359.99999999999994}{\sizeInnerPie}{\catInnerNColor}
     
             % Outer pie: text subcategories
-            \node [font=\fontOuter] at (147.93103448275863:\posRadLabOuter) {A1};
+            \node [font=\fontOuter] at (147.93103448275863:\posRadLabOuter) {\textit{FI}};
             \node [below, font=\fontOuter] at (147.93103448275863:\posRadLabOuter) {82.18\%};
-            \node [font=\fontOuter] at (303.1034482758621:\posRadLabOuter) {A2};
+            \node [font=\fontOuter] at (303.1034482758621:\posRadLabOuter) {\textit{fi}};
             \node [below, font=\fontOuter] at (303.1034482758621:\posRadLabOuter) {4.02\%};
-            \node [font=\fontOuter] at (328.9655172413793:\posRadLabOuter) {B1};
+            \node [font=\fontOuter] at (328.9655172413793:\posRadLabOuter) {\textit{BI}};
             \node [below, font=\fontOuter] at (328.9655172413793:\posRadLabOuter) {10.34\%};
-            % \node [font=\fontOuter] at (347.58620689655174:\posRadLabOuter) {B2};
+            % \node [font=\fontOuter] at (347.58620689655174:\posRadLabOuter) {\textit{bi}};
             % \node [below, font=\fontOuter] at (347.58620689655174:\posRadLabOuter) {0.00\%};
-            % \node [font=\fontOuter] at (347.58620689655174:\posRadLabOuter) {B3};
-            % \node [below, font=\fontOuter] at (347.58620689655174:\posRadLabOuter) {0.00\%};
-            \node [font=\fontOuter] at (353.7931034482759:\posRadLabOuter) {C1};
+            \node [font=\fontOuter] at (353.7931034482759:\posRadLabOuter) {\textit{NC}};
             \node [below, font=\fontOuter] at (353.7931034482759:\posRadLabOuter) {3.45\%};
-            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {C2};
-            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
             % Inner pie: text categories
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {A};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {86.21\%};
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {B};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {10.34\%};
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {C};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {3.45\%};
+            \node [font=\fontInner] at (155.17241379310343:\posRadLabInner) {86.21\%};
+            % \node [font=\fontInner] at (328.9655172413793:\posRadLabInner) {10.34\%};
+            % \node [font=\fontInner] at (353.7931034482758:\posRadLabInner) {3.45\%};
         \end{tikzpicture}
         \subcaption{\emph{mssc/randomNormal/RAND}}
         \label{fig:msscrandomNormalRAND}
@@ -59,40 +50,31 @@
             \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
             % diagram
             % Outer pie: background subcategories
-            \filledarc{0}{99.3103448275862}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{99.3103448275862}{126.20689655172414}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{126.20689655172414}{295.8620689655172}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{295.8620689655172}{343.44827586206895}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{343.44827586206895}{343.44827586206895}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{343.44827586206895}{357.9310344827586}{\sizeOuterPie}{\catOuterCColor}
-            \filledarc{357.9310344827586}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{0}{169.65517241379308}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{169.65517241379308}{217.24137931034483}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{217.24137931034483}{316.55172413793105}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{316.55172413793105}{343.44827586206895}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{343.44827586206895}{360.0}{\sizeOuterPie}{\catOuterNColor}
             % Inner pie: background categories
-            \filledarc{0}{126.20689655172414}{\sizeInnerPie}{\catInnerAColor}
-            \filledarc{126.20689655172414}{343.44827586206895}{\sizeInnerPie}{\catInnerBColor}
-            \filledarc{343.44827586206895}{360.0}{\sizeInnerPie}{\catInnerCColor}
+            \filledarc{0}{217.24137931034483}{\sizeInnerPie}{\catInnerFColor}
+            \filledarc{217.24137931034483}{343.44827586206895}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{343.44827586206895}{360.0}{\sizeInnerPie}{\catInnerNColor}
     
             % Outer pie: text subcategories
-            \node [font=\fontOuter] at (49.6551724137931:\posRadLabOuter) {A1};
-            \node [below, font=\fontOuter] at (49.6551724137931:\posRadLabOuter) {27.59\%};
-            \node [font=\fontOuter] at (112.75862068965517:\posRadLabOuter) {A2};
-            \node [below, font=\fontOuter] at (112.75862068965517:\posRadLabOuter) {7.47\%};
-            \node [font=\fontOuter] at (211.03448275862067:\posRadLabOuter) {B1};
-            \node [below, font=\fontOuter] at (211.03448275862067:\posRadLabOuter) {47.13\%};
-            \node [font=\fontOuter] at (319.6551724137931:\posRadLabOuter) {B2};
-            \node [below, font=\fontOuter] at (319.6551724137931:\posRadLabOuter) {13.22\%};
-            % \node [font=\fontOuter] at (343.44827586206895:\posRadLabOuter) {B3};
-            % \node [below, font=\fontOuter] at (343.44827586206895:\posRadLabOuter) {0.00\%};
-            \node [font=\fontOuter] at (350.6896551724138:\posRadLabOuter) {C1};
-            \node [below, font=\fontOuter] at (350.6896551724138:\posRadLabOuter) {4.02\%};
-            \node [font=\fontOuter] at (358.9655172413793:\posRadLabOuter) {C2};
-            \node [below, font=\fontOuter] at (358.9655172413793:\posRadLabOuter) {0.57\%};
+            \node [font=\fontOuter] at (84.82758620689654:\posRadLabOuter) {\textit{FI}};
+            \node [below, font=\fontOuter] at (84.82758620689654:\posRadLabOuter) {47.13\%};
+            \node [font=\fontOuter] at (193.44827586206895:\posRadLabOuter) {\textit{fi}};
+            \node [below, font=\fontOuter] at (193.44827586206895:\posRadLabOuter) {13.22\%};
+            \node [font=\fontOuter] at (266.8965517241379:\posRadLabOuter) {\textit{BI}};
+            \node [below, font=\fontOuter] at (266.8965517241379:\posRadLabOuter) {27.59\%};
+            \node [font=\fontOuter] at (330.0:\posRadLabOuter) {\textit{bi}};
+            \node [below, font=\fontOuter] at (330.0:\posRadLabOuter) {7.47\%};
+            \node [font=\fontOuter] at (351.7241379310345:\posRadLabOuter) {\textit{NC}};
+            \node [below, font=\fontOuter] at (351.7241379310345:\posRadLabOuter) {4.60\%};
             % Inner pie: text categories
-            \node [font=\fontInner] at (358.9655172413793:\posRadLabInner) {A};
-            \node [below, font=\fontInner] at (358.9655172413793:\posRadLabInner) {35.06\%};
-            \node [font=\fontInner] at (358.9655172413793:\posRadLabInner) {B};
-            \node [below, font=\fontInner] at (358.9655172413793:\posRadLabInner) {60.34\%};
-            \node [font=\fontInner] at (358.9655172413793:\posRadLabInner) {C};
-            \node [below, font=\fontInner] at (358.9655172413793:\posRadLabInner) {4.60\%};
+            \node [font=\fontInner] at (108.62068965517241:\posRadLabInner) {60.34\%};
+            \node [font=\fontInner] at (280.34482758620686:\posRadLabInner) {35.06\%};
+            % \node [font=\fontInner] at (351.7241379310345:\posRadLabInner) {4.60\%};
         \end{tikzpicture}
         \subcaption{\emph{mssc/randomNormal/GREEDY}}
         \label{fig:msscrandomNormalGREEDY}
@@ -107,184 +89,31 @@
             \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
             % diagram
             % Outer pie: background subcategories
-            \filledarc{0}{97.24137931034483}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{97.24137931034483}{136.55172413793105}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{136.55172413793105}{300.0}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{300.0}{341.37931034482756}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{341.37931034482756}{341.37931034482756}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{341.37931034482756}{357.9310344827586}{\sizeOuterPie}{\catOuterCColor}
-            \filledarc{357.9310344827586}{360.0}{\sizeOuterPie}{\catOuterCColor}
+            \filledarc{0}{215.17241379310346}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{215.17241379310346}{248.27586206896552}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{248.27586206896552}{297.9310344827586}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{297.9310344827586}{337.2413793103448}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{337.2413793103448}{360.0}{\sizeOuterPie}{\catOuterNColor}
             % Inner pie: background categories
-            \filledarc{0}{136.55172413793102}{\sizeInnerPie}{\catInnerAColor}
-            \filledarc{136.55172413793102}{341.37931034482756}{\sizeInnerPie}{\catInnerBColor}
-            \filledarc{341.37931034482756}{360.0}{\sizeInnerPie}{\catInnerCColor}
+            \filledarc{0}{248.27586206896552}{\sizeInnerPie}{\catInnerFColor}
+            \filledarc{248.27586206896552}{337.2413793103448}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{337.2413793103448}{360.0}{\sizeInnerPie}{\catInnerNColor}
     
             % Outer pie: text subcategories
-            \node [font=\fontOuter] at (48.62068965517241:\posRadLabOuter) {A1};
-            \node [below, font=\fontOuter] at (48.62068965517241:\posRadLabOuter) {27.01\%};
-            \node [font=\fontOuter] at (116.89655172413794:\posRadLabOuter) {A2};
-            \node [below, font=\fontOuter] at (116.89655172413794:\posRadLabOuter) {10.92\%};
-            \node [font=\fontOuter] at (218.27586206896552:\posRadLabOuter) {B1};
-            \node [below, font=\fontOuter] at (218.27586206896552:\posRadLabOuter) {45.40\%};
-            \node [font=\fontOuter] at (320.6896551724138:\posRadLabOuter) {B2};
-            \node [below, font=\fontOuter] at (320.6896551724138:\posRadLabOuter) {11.49\%};
-            % \node [font=\fontOuter] at (341.37931034482756:\posRadLabOuter) {B3};
-            % \node [below, font=\fontOuter] at (341.37931034482756:\posRadLabOuter) {0.00\%};
-            \node [font=\fontOuter] at (349.6551724137931:\posRadLabOuter) {C1};
-            \node [below, font=\fontOuter] at (349.6551724137931:\posRadLabOuter) {4.60\%};
-            \node [font=\fontOuter] at (358.9655172413793:\posRadLabOuter) {C2};
-            \node [below, font=\fontOuter] at (358.9655172413793:\posRadLabOuter) {0.57\%};
-            % Inner pie: text categories
-            \node [font=\fontInner] at (358.9655172413793:\posRadLabInner) {A};
-            \node [below, font=\fontInner] at (358.9655172413793:\posRadLabInner) {37.93\%};
-            \node [font=\fontInner] at (358.9655172413793:\posRadLabInner) {B};
-            \node [below, font=\fontInner] at (358.9655172413793:\posRadLabInner) {56.90\%};
-            \node [font=\fontInner] at (358.9655172413793:\posRadLabInner) {C};
-            \node [below, font=\fontInner] at (358.9655172413793:\posRadLabInner) {5.17\%};
-        \end{tikzpicture}
-        \subcaption{\emph{mssc/randomNormal/GREEDY TOP3}}
-        \label{fig:msscrandomNormalGREEDY TOP3}
-    \end{minipage}
-    \begin{minipage}[t]{\sizeFig\linewidth}
-        \begin{tikzpicture}
-            % Define the colors to use
-            \colorPalet
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
-            % diagram
-            % Outer pie: background subcategories
-            \filledarc{0}{93.10344827586208}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{93.10344827586208}{134.48275862068965}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{134.48275862068965}{308.2758620689655}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{308.2758620689655}{351.7241379310345}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{351.7241379310345}{351.7241379310345}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{351.7241379310345}{357.9310344827586}{\sizeOuterPie}{\catOuterCColor}
-            \filledarc{357.9310344827586}{360.0}{\sizeOuterPie}{\catOuterCColor}
-            % Inner pie: background categories
-            \filledarc{0}{134.48275862068965}{\sizeInnerPie}{\catInnerAColor}
-            \filledarc{134.48275862068965}{351.7241379310345}{\sizeInnerPie}{\catInnerBColor}
-            \filledarc{351.7241379310345}{360.0}{\sizeInnerPie}{\catInnerCColor}
-    
-            % Outer pie: text subcategories
-            \node [font=\fontOuter] at (46.55172413793104:\posRadLabOuter) {A1};
-            \node [below, font=\fontOuter] at (46.55172413793104:\posRadLabOuter) {25.86\%};
-            \node [font=\fontOuter] at (113.79310344827587:\posRadLabOuter) {A2};
-            \node [below, font=\fontOuter] at (113.79310344827587:\posRadLabOuter) {11.49\%};
-            \node [font=\fontOuter] at (221.3793103448276:\posRadLabOuter) {B1};
-            \node [below, font=\fontOuter] at (221.3793103448276:\posRadLabOuter) {48.28\%};
-            \node [font=\fontOuter] at (330.0:\posRadLabOuter) {B2};
-            \node [below, font=\fontOuter] at (330.0:\posRadLabOuter) {12.07\%};
-            % \node [font=\fontOuter] at (351.7241379310345:\posRadLabOuter) {B3};
-            % \node [below, font=\fontOuter] at (351.7241379310345:\posRadLabOuter) {0.00\%};
-            \node [font=\fontOuter] at (354.8275862068965:\posRadLabOuter) {C1};
-            \node [below, font=\fontOuter] at (354.8275862068965:\posRadLabOuter) {1.72\%};
-            \node [font=\fontOuter] at (358.9655172413793:\posRadLabOuter) {C2};
-            \node [below, font=\fontOuter] at (358.9655172413793:\posRadLabOuter) {0.57\%};
-            % Inner pie: text categories
-            \node [font=\fontInner] at (358.9655172413793:\posRadLabInner) {A};
-            \node [below, font=\fontInner] at (358.9655172413793:\posRadLabInner) {37.36\%};
-            \node [font=\fontInner] at (358.9655172413793:\posRadLabInner) {B};
-            \node [below, font=\fontInner] at (358.9655172413793:\posRadLabInner) {60.34\%};
-            \node [font=\fontInner] at (358.9655172413793:\posRadLabInner) {C};
-            \node [below, font=\fontInner] at (358.9655172413793:\posRadLabInner) {2.30\%};
-        \end{tikzpicture}
-        \subcaption{\emph{mssc/randomNormal/GREEDY TOP4}}
-        \label{fig:msscrandomNormalGREEDY TOP4}
-    \end{minipage}
-    \begin{minipage}[t]{\sizeFig\linewidth}
-        \begin{tikzpicture}
-            % Define the colors to use
-            \colorPalet
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
-            % diagram
-            % Outer pie: background subcategories
-            \filledarc{0}{91.0344827586207}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{91.0344827586207}{134.48275862068965}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{134.48275862068965}{306.2068965517241}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{306.2068965517241}{345.51724137931035}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{345.51724137931035}{345.51724137931035}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{345.51724137931035}{360.0}{\sizeOuterPie}{\catOuterCColor}
-            \filledarc{360.0}{360.0}{\sizeOuterPie}{\catOuterCColor}
-            % Inner pie: background categories
-            \filledarc{0}{134.48275862068965}{\sizeInnerPie}{\catInnerAColor}
-            \filledarc{134.48275862068965}{345.51724137931035}{\sizeInnerPie}{\catInnerBColor}
-            \filledarc{345.51724137931035}{360.0}{\sizeInnerPie}{\catInnerCColor}
-    
-            % Outer pie: text subcategories
-            \node [font=\fontOuter] at (45.51724137931035:\posRadLabOuter) {A1};
-            \node [below, font=\fontOuter] at (45.51724137931035:\posRadLabOuter) {25.29\%};
-            \node [font=\fontOuter] at (112.75862068965517:\posRadLabOuter) {A2};
-            \node [below, font=\fontOuter] at (112.75862068965517:\posRadLabOuter) {12.07\%};
-            \node [font=\fontOuter] at (220.3448275862069:\posRadLabOuter) {B1};
-            \node [below, font=\fontOuter] at (220.3448275862069:\posRadLabOuter) {47.70\%};
-            \node [font=\fontOuter] at (325.8620689655172:\posRadLabOuter) {B2};
-            \node [below, font=\fontOuter] at (325.8620689655172:\posRadLabOuter) {10.92\%};
-            % \node [font=\fontOuter] at (345.51724137931035:\posRadLabOuter) {B3};
-            % \node [below, font=\fontOuter] at (345.51724137931035:\posRadLabOuter) {0.00\%};
-            \node [font=\fontOuter] at (352.7586206896552:\posRadLabOuter) {C1};
-            \node [below, font=\fontOuter] at (352.7586206896552:\posRadLabOuter) {4.02\%};
-            % \node [font=\fontOuter] at (360.0:\posRadLabOuter) {C2};
-            % \node [below, font=\fontOuter] at (360.0:\posRadLabOuter) {0.00\%};
-            % Inner pie: text categories
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {A};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {37.36\%};
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {B};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {58.62\%};
-            \node [font=\fontInner] at (360.0:\posRadLabInner) {C};
-            \node [below, font=\fontInner] at (360.0:\posRadLabInner) {4.02\%};
-        \end{tikzpicture}
-        \subcaption{\emph{mssc/randomNormal/GREEDY TOP5}}
-        \label{fig:msscrandomNormalGREEDY TOP5}
-    \end{minipage}
-    \begin{minipage}[t]{\sizeFig\linewidth}
-        \begin{tikzpicture}
-            % Define the colors to use
-            \colorPalet
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
-            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
-            % diagram
-            % Outer pie: background subcategories
-            \filledarc{0}{49.6551724137931}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{49.6551724137931}{88.9655172413793}{\sizeOuterPie}{\catOuterAColor}
-            \filledarc{88.9655172413793}{304.1379310344828}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{304.1379310344828}{337.2413793103449}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{337.2413793103449}{337.2413793103449}{\sizeOuterPie}{\catOuterBColor}
-            \filledarc{337.2413793103449}{360.00000000000006}{\sizeOuterPie}{\catOuterCColor}
-            \filledarc{360.00000000000006}{360.00000000000006}{\sizeOuterPie}{\catOuterCColor}
-            % Inner pie: background categories
-            \filledarc{0}{88.96551724137932}{\sizeInnerPie}{\catInnerAColor}
-            \filledarc{88.96551724137932}{337.2413793103448}{\sizeInnerPie}{\catInnerBColor}
-            \filledarc{337.2413793103448}{360.0}{\sizeInnerPie}{\catInnerCColor}
-    
-            % Outer pie: text subcategories
-            \node [font=\fontOuter] at (24.82758620689655:\posRadLabOuter) {A1};
-            \node [below, font=\fontOuter] at (24.82758620689655:\posRadLabOuter) {13.79\%};
-            \node [font=\fontOuter] at (69.3103448275862:\posRadLabOuter) {A2};
-            \node [below, font=\fontOuter] at (69.3103448275862:\posRadLabOuter) {10.92\%};
-            \node [font=\fontOuter] at (196.55172413793105:\posRadLabOuter) {B1};
-            \node [below, font=\fontOuter] at (196.55172413793105:\posRadLabOuter) {59.77\%};
-            \node [font=\fontOuter] at (320.68965517241384:\posRadLabOuter) {B2};
-            \node [below, font=\fontOuter] at (320.68965517241384:\posRadLabOuter) {9.20\%};
-            % \node [font=\fontOuter] at (337.2413793103449:\posRadLabOuter) {B3};
-            % \node [below, font=\fontOuter] at (337.2413793103449:\posRadLabOuter) {0.00\%};
-            \node [font=\fontOuter] at (348.62068965517244:\posRadLabOuter) {C1};
+            \node [font=\fontOuter] at (107.58620689655173:\posRadLabOuter) {\textit{FI}};
+            \node [below, font=\fontOuter] at (107.58620689655173:\posRadLabOuter) {59.77\%};
+            \node [font=\fontOuter] at (231.72413793103448:\posRadLabOuter) {\textit{fi}};
+            \node [below, font=\fontOuter] at (231.72413793103448:\posRadLabOuter) {9.20\%};
+            \node [font=\fontOuter] at (273.1034482758621:\posRadLabOuter) {\textit{BI}};
+            \node [below, font=\fontOuter] at (273.1034482758621:\posRadLabOuter) {13.79\%};
+            \node [font=\fontOuter] at (317.58620689655174:\posRadLabOuter) {\textit{bi}};
+            \node [below, font=\fontOuter] at (317.58620689655174:\posRadLabOuter) {10.92\%};
+            \node [font=\fontOuter] at (348.62068965517244:\posRadLabOuter) {\textit{NC}};
             \node [below, font=\fontOuter] at (348.62068965517244:\posRadLabOuter) {6.32\%};
-            % \node [font=\fontOuter] at (360.00000000000006:\posRadLabOuter) {C2};
-            % \node [below, font=\fontOuter] at (360.00000000000006:\posRadLabOuter) {0.00\%};
             % Inner pie: text categories
-            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {A};
-            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {24.71\%};
-            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {B};
-            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {68.97\%};
-            \node [font=\fontInner] at (360.00000000000006:\posRadLabInner) {C};
-            \node [below, font=\fontInner] at (360.00000000000006:\posRadLabInner) {6.32\%};
+            \node [font=\fontInner] at (124.13793103448276:\posRadLabInner) {68.97\%};
+            \node [font=\fontInner] at (292.7586206896552:\posRadLabInner) {24.71\%};
+            % \node [font=\fontInner] at (348.62068965517244:\posRadLabInner) {6.32\%};
         \end{tikzpicture}
         \subcaption{\emph{mssc/randomNormal/GREEDY randomized}}
         \label{fig:msscrandomNormalGREEDY randomized}

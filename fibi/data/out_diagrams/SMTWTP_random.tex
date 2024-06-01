@@ -1,0 +1,84 @@
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=\linewidth}
+    \begin{minipage}[t]{\sizeFig\linewidth}
+        \begin{tikzpicture}
+            % Define the colors to use
+            \colorPalet
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
+            % diagram
+            % Outer pie: background subcategories
+            \filledarc{0}{82.28571428571428}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{82.28571428571428}{86.39999999999999}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{86.39999999999999}{343.54285714285714}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{343.54285714285714}{343.54285714285714}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{343.54285714285714}{360.0}{\sizeOuterPie}{\catOuterNColor}
+            % Inner pie: background categories
+            \filledarc{0}{86.39999999999999}{\sizeInnerPie}{\catInnerFColor}
+            \filledarc{86.39999999999999}{343.54285714285714}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{343.54285714285714}{360.0}{\sizeInnerPie}{\catInnerNColor}
+    
+            % Outer pie: text subcategories
+            \node [font=\fontOuter] at (41.14285714285714:\posRadLabOuter) {\textit{FI}};
+            \node [below, font=\fontOuter] at (41.14285714285714:\posRadLabOuter) {22.86\%};
+            \node [font=\fontOuter] at (84.34285714285713:\posRadLabOuter) {\textit{fi}};
+            \node [below, font=\fontOuter] at (84.34285714285713:\posRadLabOuter) {1.14\%};
+            \node [font=\fontOuter] at (214.97142857142856:\posRadLabOuter) {\textit{BI}};
+            \node [below, font=\fontOuter] at (214.97142857142856:\posRadLabOuter) {71.43\%};
+            % \node [font=\fontOuter] at (343.54285714285714:\posRadLabOuter) {\textit{bi}};
+            % \node [below, font=\fontOuter] at (343.54285714285714:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (351.7714285714286:\posRadLabOuter) {\textit{NC}};
+            \node [below, font=\fontOuter] at (351.7714285714286:\posRadLabOuter) {4.57\%};
+            % Inner pie: text categories
+            \node [font=\fontInner] at (43.199999999999996:\posRadLabInner) {24.00\%};
+            % \node [font=\fontInner] at (214.97142857142856:\posRadLabInner) {71.43\%};
+            % \node [font=\fontInner] at (351.7714285714286:\posRadLabInner) {4.57\%};
+        \end{tikzpicture}
+        \subcaption{\emph{SMTWTP/random/random}}
+        \label{fig:SMTWTPrandomrandom}
+    \end{minipage}
+    \begin{minipage}[t]{\sizeFig\linewidth}
+        \begin{tikzpicture}
+            % Define the colors to use
+            \colorPalet
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (A) at (\minPie,\minPie) {1};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (B) at (\minPie,\maxPie) {2};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (C) at (\maxPie,\minPie) {3};
+            \node[circle, draw=\guideColor, fill=\guideColor, color=\guideColor] (D) at (\maxPie,\maxPie) {4};
+            % diagram
+            % Outer pie: background subcategories
+            \filledarc{0}{131.65714285714284}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{131.65714285714284}{146.05714285714285}{\sizeOuterPie}{\catOuterFColor}
+            \filledarc{146.05714285714285}{310.6285714285714}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{310.6285714285714}{310.6285714285714}{\sizeOuterPie}{\catOuterBColor}
+            \filledarc{310.6285714285714}{359.99999999999994}{\sizeOuterPie}{\catOuterNColor}
+            % Inner pie: background categories
+            \filledarc{0}{146.05714285714285}{\sizeInnerPie}{\catInnerFColor}
+            \filledarc{146.05714285714285}{310.6285714285714}{\sizeInnerPie}{\catInnerBColor}
+            \filledarc{310.6285714285714}{359.99999999999994}{\sizeInnerPie}{\catInnerNColor}
+    
+            % Outer pie: text subcategories
+            \node [font=\fontOuter] at (65.82857142857142:\posRadLabOuter) {\textit{FI}};
+            \node [below, font=\fontOuter] at (65.82857142857142:\posRadLabOuter) {36.57\%};
+            \node [font=\fontOuter] at (138.85714285714283:\posRadLabOuter) {\textit{fi}};
+            \node [below, font=\fontOuter] at (138.85714285714283:\posRadLabOuter) {4.00\%};
+            \node [font=\fontOuter] at (228.3428571428571:\posRadLabOuter) {\textit{BI}};
+            \node [below, font=\fontOuter] at (228.3428571428571:\posRadLabOuter) {45.71\%};
+            % \node [font=\fontOuter] at (310.6285714285714:\posRadLabOuter) {\textit{bi}};
+            % \node [below, font=\fontOuter] at (310.6285714285714:\posRadLabOuter) {0.00\%};
+            \node [font=\fontOuter] at (335.3142857142857:\posRadLabOuter) {\textit{NC}};
+            \node [below, font=\fontOuter] at (335.3142857142857:\posRadLabOuter) {13.71\%};
+            % Inner pie: text categories
+            \node [font=\fontInner] at (73.02857142857142:\posRadLabInner) {40.57\%};
+            % \node [font=\fontInner] at (228.3428571428571:\posRadLabInner) {45.71\%};
+            % \node [font=\fontInner] at (335.3142857142857:\posRadLabInner) {13.71\%};
+        \end{tikzpicture}
+        \subcaption{\emph{SMTWTP/random/greedy}}
+        \label{fig:SMTWTPrandomgreedy}
+    \end{minipage}
+    \caption{Pie-charts for the SMTWTP problem with the random}
+    \label{fig:SMTWTPrandom}
+\end{figure}
